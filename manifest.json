@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Better Lex100",
+  "version": "0.5.7",
+  "description": "Panel flotante que resume intervinientes y documentos clave de Actuaciones en Lex100 - Poder Judicial de la Nación.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.pjn.gov.ar/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

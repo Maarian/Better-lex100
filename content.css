@@ -1,0 +1,343 @@
+#lex100-helper-panel {
+  position: fixed;
+  top: auto;
+  right: 16px;
+  bottom: 16px;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #263238;
+}
+
+#lex100-helper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a3c6e;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+
+#lex100-helper-panel.lex100-helper-minimized #lex100-helper-header {
+  cursor: default;
+}
+
+#lex100-helper-panel.lex100-helper-dragging #lex100-helper-header {
+  cursor: grabbing;
+}
+
+#lex100-helper-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#lex100-helper-body {
+  padding: 10px 12px;
+}
+
+.lex100-helper-grupo {
+  margin-bottom: 14px;
+}
+
+.lex100-helper-grupo h4 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #1a3c6e;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.lex100-helper-persona {
+  background: #f5f7fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.lex100-helper-persona-tipo {
+  font-size: 11px;
+  font-weight: bold;
+  color: #b71c1c;
+  letter-spacing: 0.5px;
+}
+
+.lex100-helper-persona-nombre {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.lex100-helper-dato {
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.lex100-helper-detenido-si {
+  color: #c62828;
+  font-weight: bold;
+  background: #ffebee;
+  border-radius: 4px;
+  padding: 2px 5px;
+  display: inline-block;
+}
+
+.lex100-helper-letrado {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  border-left: 2px solid #cfd8dc;
+}
+
+.lex100-helper-letrado-sub {
+  color: #607d8b;
+  font-size: 12px;
+}
+
+.lex100-helper-vacio {
+  color: #607d8b;
+  font-style: italic;
+}
+
+.lex100-helper-intervinientes-section {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #d7e1eb;
+}
+
+.lex100-helper-section-title {
+  margin-bottom: 8px;
+  color: #1a3c6e;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Documentos clave de Actuaciones */
+.lex100-helper-documentos {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #d7e1eb;
+}
+
+.lex100-helper-document-header,
+.lex100-helper-document-group-title,
+.lex100-helper-document-meta,
+.lex100-helper-document-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lex100-helper-document-header {
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #1a3c6e;
+  font-weight: bold;
+}
+
+.lex100-helper-document-status,
+.lex100-helper-document-summary,
+.lex100-helper-document-note,
+.lex100-helper-document-empty,
+.lex100-helper-document-more {
+  color: #607d8b;
+  line-height: 1.35;
+}
+
+.lex100-helper-document-status {
+  font-size: 12px;
+}
+
+.lex100-helper-document-summary,
+.lex100-helper-document-note,
+.lex100-helper-document-empty,
+.lex100-helper-document-more {
+  font-size: 11px;
+}
+
+.lex100-helper-document-note {
+  margin: 6px 0 8px;
+  font-style: italic;
+}
+
+.lex100-helper-document-message {
+  margin: 6px 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #1a3c6e;
+  background: #eaf2fb;
+}
+
+.lex100-helper-antecedentes-group {
+  padding-left: 0;
+}
+
+.lex100-helper-document-subsection {
+  margin-top: 7px;
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 2px solid #d7e1eb;
+}
+
+.lex100-helper-document-subsection .lex100-helper-document-group-title {
+  font-size: 11px;
+}
+
+.lex100-helper-document-group {
+  margin-top: 9px;
+}
+
+.lex100-helper-document-group-title {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: #1a3c6e;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lex100-helper-document-group-title > span:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.lex100-helper-document-status-value {
+  flex: 0 0 auto;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.lex100-helper-document-status-si {
+  color: #1b5e20;
+  background: #e8f5e9;
+}
+
+.lex100-helper-document-status-review {
+  color: #8a4b00;
+  background: #fff3cd;
+}
+
+.lex100-helper-document-status-no {
+  color: #8b1a1a;
+  background: #ffebee;
+}
+
+.lex100-helper-document-status-unknown {
+  color: #546e7a;
+  background: #eceff1;
+}
+
+.lex100-helper-count {
+  min-width: 18px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  background: #e7eef7;
+  color: #1a3c6e;
+  text-align: center;
+  font-size: 11px;
+}
+
+.lex100-helper-document-match {
+  margin-bottom: 6px;
+  padding: 7px 8px;
+  border: 1px solid #d9e1ea;
+  border-radius: 5px;
+  background: #fbfcfe;
+}
+
+.lex100-helper-document-description {
+  margin-bottom: 4px;
+  color: #263238;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.lex100-helper-document-meta {
+  flex-wrap: wrap;
+  color: #78909c;
+  font-size: 10px;
+}
+
+.lex100-helper-confidence {
+  font-weight: bold;
+}
+
+.lex100-helper-confidence-exacta {
+  color: #2e7d32;
+}
+
+.lex100-helper-confidence-posible {
+  color: #ef6c00;
+}
+
+.lex100-helper-document-actions {
+  margin-top: 5px;
+}
+
+.lex100-helper-document-no-pdf {
+  color: #9e9e9e;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.lex100-helper-button {
+  min-height: 24px;
+  padding: 4px 8px;
+  border: 1px solid #1a5a9e;
+  border-radius: 4px;
+  background: #1a5a9e;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.lex100-helper-button:hover {
+  background: #144a82;
+}
+
+.lex100-helper-button-secondary {
+  border-color: #78909c;
+  background: #ffffff;
+  color: #546e7a;
+}
+
+.lex100-helper-button-secondary:hover {
+  background: #eceff1;
+}
+
+.lex100-helper-button-small {
+  min-height: 22px;
+  padding: 3px 7px;
+  font-size: 10px;
+}
